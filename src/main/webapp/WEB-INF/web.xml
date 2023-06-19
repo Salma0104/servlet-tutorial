@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
-<!--Add servlet-->
+<!--
 <servlet>
 	<servlet-name>add</servlet-name>
 	<servlet-class>com.pracProject.AddServlet</servlet-class>
@@ -11,7 +11,7 @@
 	<url-pattern>/add</url-pattern>
 </servlet-mapping>
 
-<!--square servlet-->
+
 <servlet>
 	<servlet-name>sq</servlet-name>
 	<servlet-class>com.pracProject.SqServlet</servlet-class>
@@ -22,7 +22,7 @@
 	<url-pattern>/square</url-pattern>
 </servlet-mapping>
 
-<!-- Register Servlet -->
+
 <servlet>
 	<servlet-name>reg</servlet-name>
 	<servlet-class>com.pracProject.RegisterServlet</servlet-class>
@@ -33,7 +33,7 @@
 	<url-pattern>/register</url-pattern>
 </servlet-mapping>
 
-<!-- Login Servlet -->
+
 <servlet>
 	<servlet-name>log</servlet-name>
 	<servlet-class>com.pracProject.LoginServlet</servlet-class>
@@ -45,8 +45,6 @@
 </servlet-mapping>
 
 
-
-<!-- Welcome Servlet -->
 <servlet>
 	<servlet-name>wel</servlet-name>
 	<servlet-class>com.pracProject.WelcomeServlet</servlet-class>
@@ -56,5 +54,5 @@
 	<servlet-name>wel</servlet-name>
 	<url-pattern>/welcome</url-pattern>
 </servlet-mapping>
-
+-->
 </web-app>

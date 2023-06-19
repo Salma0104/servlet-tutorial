@@ -5,11 +5,13 @@ import java.text.SimpleDateFormat;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet{
 
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
@@ -21,14 +23,10 @@ public class LoginServlet extends HttpServlet{
 		// check user name and password equal to session user name + password + redirect 2 wel
 		
 		String username = req.getParameter("username");
-		System.out.println(username);
 		String password = req.getParameter("password");
-		System.out.println(password);
 		HttpSession session = req.getSession();
 		String savedUsername = (String) session.getAttribute("username");
-		System.out.println(savedUsername);
 		String savedPassword = (String) session.getAttribute("password");
-		System.out.println(savedPassword);
 		
 		boolean success = savedUsername.equals(username) && savedPassword.equals(password);
 		session.setAttribute("success", success);
